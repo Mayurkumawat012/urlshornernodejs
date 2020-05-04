@@ -31,6 +31,7 @@ router.get('/', function(req, res, next) {
     let query_isexist = "SELECT * FROM urlmangement WHERE longurl = '"+req.body.longurl+"'";
     db.query(query_isexist, (err,row,fields)=> {
       if(err){
+        console.log(err);
         res.status(500).send({status:"failure",error:"Internal server error "+err});
       }
       else{
