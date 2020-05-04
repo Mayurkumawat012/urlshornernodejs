@@ -97,7 +97,7 @@
                     longurl:$('#longurlid').val()
                     }
                     $.ajax({
-                        url: 'http://localhost:3000/longurl2shorurl',
+                        url: 'http://{{hostname}}:3000/longurl2shorurl',
                         type:'post',
                     
                         data:dataforapi,
