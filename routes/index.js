@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../conn/db');
-var os = require('os');
+var {hostname} = require('../config/cred');
+
 /* GET users listing. */
 router.get('',(req,res,next)=>{
-    res.redirect('http://'+os.hostname()+':3000/ui/home');
+    res.redirect('http://'+hostname+':3000/ui/home');
 });
 router.get('/:id', function(req, res, next) {
     //   res.send(req.params);

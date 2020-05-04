@@ -1,6 +1,7 @@
 var mysql = require('mysql');
-var dotenv = require('dotenv').config();
-//dotenv.load();
+var dotenv = require('dotenv');
+dotenv.config();
+// dotenv.load();
 
 var db_config = {
     connectionLimit : 30,

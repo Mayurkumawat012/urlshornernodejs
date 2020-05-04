@@ -1,7 +1,9 @@
 let express = require('express');
 let router = express.Router();
 let db = require('../conn/db');
-var os = require('os');
+
+var {hostname} = require('../config/cred');
+
 /* GET users listing. */
 
 function makeid(length) {
@@ -33,7 +35,7 @@ router.get('/', function(req, res, next) {
       }
       else{
         if(row.length > 0){
-          res.send({"status":"success","shorturl":os.hostname()+":3000/"+row[0].shorturl});
+          res.send({"status":"success","shorturl":hostname+":3000/"+row[0].shorturl});
         }
         else{
           let qur = "INSERT into urlmangement (urlid, shorturl, longurl) values ('"+urlid+"','"+shorturl+"','"+req.body.longurl+"')";
@@ -44,7 +46,7 @@ router.get('/', function(req, res, next) {
               }
               else
               {
-                res.send({"status":"success","shorturl":os.hostname()+":3000/"+shorturl});
+                res.send({"status":"success","shorturl":hostname+":3000/"+shorturl});
               }
           })
         }
