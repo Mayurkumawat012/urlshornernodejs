@@ -19,7 +19,7 @@ var db_config = {
 //     database='urlshortner'
 // }
 
-// console.log(db_config);
+console.log(JSON.stringify(db_config));
 
 // console.log(process);
 var pool = mysql.createPool(db_config);
