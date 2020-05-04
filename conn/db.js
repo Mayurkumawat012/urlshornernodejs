@@ -1,22 +1,22 @@
 var mysql = require('mysql');
-// var dotenv = require('dotenv');
-// dotenv.load();
+var dotenv = require('dotenv');
+dotenv.load();
 
-// var db_config = {
-//     connectionLimit : 30,
-//     // host     : process.env.host,
-//     host:process.env.host,
-//     user     : process.env.user,
-//     password:process.env.password,
-//     database : process.env.database
+var db_config = {
+    connectionLimit : 30,
+    // host     : process.env.host,
+    host:process.env.host,
+    user     : process.env.user,
+    password:process.env.password,
+    database : process.env.database
     
-// }
-let db_config ={
-    host='localhost',
-    user='root',
-    password='root',
-    database='urlshortner'
 }
+// let db_config ={
+//     host='localhost',
+//     user='root',
+//     password='root',
+//     database='urlshortner'
+// }
 
 // console.log(db_config);
 
