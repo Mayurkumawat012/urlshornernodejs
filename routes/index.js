@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../conn/db');
+var tp = require('../script/deleteDayUserScript');
 var {hostname} = require('../config/cred');
 
 /* GET users listing. */
