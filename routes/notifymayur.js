@@ -31,15 +31,18 @@ router.get('/', (req, res, next) => {
               else {
                 callback(null, html);
               }
-            });
+            });  
           };
           
+          let email =process.env.email;
+           let pass =process.env.pass;
+
           smtpTransport = nodemailer.createTransport({
             service: 'gmail',
-              
+            port: 993,
             auth: {
-              user: process.env.email, // generated ethereal user
-              pass: process.env.pass // generated ethereal password
+              user: email, // generated ethereal user
+              pass: pass // generated ethereal password
             }
             });
           
@@ -61,7 +64,9 @@ router.get('/', (req, res, next) => {
             };
             smtpTransport.sendMail(mailOptions, function (error, response) {
               if (error) {
-                console.log(process.env.email,process.env.pass);
+                console.log(process.env.email,process.env.pass,error);
+                console.log(typeof process.env.email)
+                console.log(typeof process.env.pass)
                 res.status(500).json({"status":"failure","error":"Error in Sending Mail"});
       
               }
