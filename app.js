@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var longurl2shorurl = require('./routes/longurl2shorurl');
 var redirecturl = require('./routes/redirecturl');
 var ui = require('./routes/ui');
+var notifymayur = require('./routes/notifymayur');
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,6 +24,8 @@ app.use('/', indexRouter);
 app.use('/longurl2shorurl', longurl2shorurl);
 app.use('/redirecturl', redirecturl);
 app.use('/ui', ui);
+app.use('/notifymayur', notifymayur);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
