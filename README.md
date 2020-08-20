@@ -3,10 +3,12 @@
 step 1: Clone this Repository
 -----------------------------------------------------------------------------------------------
 
-step 2: Enter this Repo from Terminal.
+step 2: Enter this in Terminal.<br />
+<br />
+```git clone https://github.com/Mayurkumawat012/urlshornernodejs.git```
 -----------------------------------------------------------------------------------------------
 
-step 3: Enter command `npm install'
+step 3: Enter command ```npm install```
 -----------------------------------------------------------------------------------------------
 
 step 4: Then add .env file where you have to declare crendentials of mysql DB.<br/>
