@@ -20,7 +20,7 @@
     "nodemailer": "^6.4.7",
     "nodemailer-smtp-transport": "^2.7.4",
     "os": "^0.1.1",
-    "pug": "2.0.0-beta11",
+    "pug": "3.0.1",
     "save": "^2.4.0"
   }
 }
